@@ -25,12 +25,32 @@ const eventos = [
 
     {
         data: "2026-09-06",
+        tipo: "Escola Bíblica",
+        titulo: "Escola Bíblica",
+        horario: "9h30",
+        local: "5ª Igreja Presbiteriana de Maringá",
+        descricao: "Momento de estudo e aprofundamento da Palavra de Deus.",
+        destaque: false
+    },
+
+    {
+        data: "2026-09-06",
         tipo: "Culto",
         titulo: "Culto de Celebração",
         horario: "19h",
         local: "5ª Igreja Presbiteriana de Maringá",
-        descricao: "Culto de celebração e comunhão da igreja.",
+        descricao: "Culto de celebração, comunhão e adoração.",
         destaque: true
+    },
+
+    {
+        data: "2026-09-08",
+        tipo: "Projeto ANA",
+        titulo: "Projeto ANA",
+        horario: "14h",
+        local: "5ª Igreja Presbiteriana de Maringá",
+        descricao: "Encontro do Projeto ANA.",
+        destaque: false
     }
 
 ];

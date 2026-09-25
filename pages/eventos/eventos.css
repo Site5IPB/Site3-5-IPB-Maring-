@@ -56,13 +56,27 @@
     background: var(--cor-fundo-secundario);
 }
 
-.eventos-cabecalho {
-    margin-bottom: 24px;
+
+/* =========================================================
+   GRUPOS DE EVENTOS
+   ========================================================= */
+
+.eventos-grupo {
+    margin-bottom: 50px;
 }
 
-.eventos-cabecalho h2 {
+.eventos-grupo:last-child {
+    margin-bottom: 0;
+}
+
+.eventos-grupo-cabecalho {
+    margin-bottom: 22px;
+}
+
+.eventos-grupo-cabecalho h2 {
     color: var(--cor-texto);
     font-size: 1.8rem;
+    line-height: 1.2;
 }
 
 
@@ -78,22 +92,28 @@
 
 
 /* =========================================================
-   CARD
+   CARD DE EVENTO
    ========================================================= */
 
 .evento-card {
     display: flex;
     align-items: center;
     gap: 20px;
+
     padding: 22px;
+
     background: var(--cor-fundo-card);
+
     border: 1px solid var(--cor-borda);
     border-radius: var(--raio-medio);
+
     box-shadow: var(--sombra-suave);
+
     transition:
         transform var(--transicao),
         box-shadow var(--transicao),
-        border-color var(--transicao);
+        border-color var(--transicao),
+        opacity var(--transicao);
 }
 
 .evento-card:hover {
@@ -102,40 +122,50 @@
 
 
 /* =========================================================
-   DATA
+   DATA DO EVENTO
    ========================================================= */
 
 .evento-data {
     flex: 0 0 72px;
+
     width: 72px;
     height: 78px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     background: var(--verde-principal);
+
     border-radius: var(--raio-medio);
+
     color: #ffffff;
+
     text-align: center;
 }
 
 .evento-dia {
     display: block;
+
     font-size: 1.8rem;
     font-weight: 800;
+
     line-height: 1;
 }
 
 .evento-mes {
     margin-top: 5px;
+
     font-size: 0.75rem;
     font-weight: 700;
+
     letter-spacing: 0.08em;
 }
 
 
 /* =========================================================
-   INFORMAÇÕES
+   INFORMAÇÕES DO EVENTO
    ========================================================= */
 
 .evento-info {
@@ -144,22 +174,94 @@
 
 .evento-tipo {
     margin-bottom: 4px;
+
     color: var(--verde-medio);
+
     font-size: 0.8rem;
     font-weight: 700;
+
     letter-spacing: 0.06em;
+
     text-transform: uppercase;
 }
 
 .evento-info h3 {
     margin-bottom: 6px;
+
     color: var(--cor-texto);
+
     font-size: 1.15rem;
+    line-height: 1.3;
 }
 
 .evento-detalhes {
     color: var(--cor-texto-secundario);
     font-size: 0.95rem;
+}
+
+.evento-local {
+    margin-top: 4px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 0.9rem;
+}
+
+.evento-descricao {
+    margin-top: 8px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   EVENTO EM DESTAQUE
+   ========================================================= */
+
+.evento-card.destaque {
+    border-color: var(--verde-medio);
+}
+
+
+/* =========================================================
+   EVENTOS ANTERIORES
+   ========================================================= */
+
+.eventos-anteriores {
+    padding-top: 35px;
+
+    border-top: 1px solid var(--cor-borda);
+}
+
+.evento-anterior {
+    opacity: 0.78;
+}
+
+.evento-anterior:hover {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   NENHUM EVENTO
+   ========================================================= */
+
+.eventos-vazio {
+    grid-column: 1 / -1;
+
+    padding: 30px;
+
+    background: var(--cor-fundo-card);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-medio);
+
+    color: var(--cor-texto-secundario);
+
+    text-align: center;
 }
 
 
@@ -215,8 +317,20 @@
         font-size: 0.98rem;
     }
 
-    .eventos-cabecalho h2 {
+    .eventos-grupo {
+        margin-bottom: 40px;
+    }
+
+    .eventos-grupo-cabecalho {
+        margin-bottom: 18px;
+    }
+
+    .eventos-grupo-cabecalho h2 {
         font-size: 1.5rem;
+    }
+
+    .eventos-anteriores {
+        padding-top: 28px;
     }
 
     .evento-card {
@@ -226,6 +340,7 @@
 
     .evento-data {
         flex-basis: 62px;
+
         width: 62px;
         height: 68px;
     }
@@ -234,62 +349,13 @@
         font-size: 1.5rem;
     }
 
+    .evento-mes {
+        font-size: 0.7rem;
+    }
+
     .evento-info h3 {
         font-size: 1rem;
     }
-
-}
-
-/* =========================================================
-   INFORMAÇÕES ADICIONAIS DO EVENTO
-   ========================================================= */
-
-.evento-local {
-    margin-top: 4px;
-    color: var(--cor-texto-secundario);
-    font-size: 0.9rem;
-}
-
-.evento-descricao {
-    margin-top: 8px;
-    color: var(--cor-texto-secundario);
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-
-/* =========================================================
-   EVENTO EM DESTAQUE
-   ========================================================= */
-
-.evento-card.destaque {
-    border-color: var(--verde-medio);
-}
-
-
-/* =========================================================
-   NENHUM EVENTO
-   ========================================================= */
-
-.eventos-vazio {
-    grid-column: 1 / -1;
-
-    padding: 30px;
-
-    background: var(--cor-fundo-card);
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--raio-medio);
-
-    color: var(--cor-texto-secundario);
-    text-align: center;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 550px) {
 
     .evento-descricao {
         font-size: 0.85rem;

@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -14,7 +15,9 @@
         content="Confira os próximos eventos da 5ª Igreja Presbiteriana de Maringá."
     >
 
-    <title>Eventos — 5ª Igreja Presbiteriana de Maringá</title>
+    <title>
+        Eventos — 5ª Igreja Presbiteriana de Maringá
+    </title>
 
     <link
         rel="icon"
@@ -35,17 +38,30 @@
         rel="stylesheet"
         href="eventos.css"
     >
+
 </head>
+
 
 <body data-root="../../">
 
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
     <header id="header"></header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
 
     <main>
 
-        <!-- =====================================================
+
+        <!-- =================================================
              INTRODUÇÃO
-             ===================================================== -->
+             ================================================= -->
 
         <section class="eventos-intro">
 
@@ -70,17 +86,22 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              EVENTOS
-             ===================================================== -->
+             ================================================= -->
 
         <section class="eventos-conteudo">
 
             <div class="eventos-container">
 
-                <div class="eventos-cabecalho">
 
-                    <div>
+                <!-- =============================================
+                     PRÓXIMOS EVENTOS
+                     ============================================= -->
+
+                <div class="eventos-grupo">
+
+                    <div class="eventos-grupo-cabecalho">
 
                         <p class="eventos-secao-label">
                             Programação
@@ -92,32 +113,79 @@
 
                     </div>
 
+
+                    <!--
+                        Os próximos eventos são
+                        carregados automaticamente
+                        pelo eventos.js.
+                    -->
+
+                    <div
+                        class="eventos-lista"
+                        id="eventos-lista"
+                    ></div>
+
                 </div>
 
 
-                <!--
-                    Os eventos serão carregados
-                    dinamicamente pelo eventos.js.
-                -->
-            <div
-                class="eventos-lista"
-                id="eventos-lista"
-            ></div>
+                <!-- =============================================
+                     EVENTOS ANTERIORES
+                     ============================================= -->
+
+                <div class="eventos-grupo eventos-anteriores">
+
+                    <div class="eventos-grupo-cabecalho">
+
+                        <p class="eventos-secao-label">
+                            Histórico
+                        </p>
+
+                        <h2>
+                            Eventos anteriores
+                        </h2>
+
+                    </div>
+
+
+                    <!--
+                        Os eventos anteriores são
+                        carregados automaticamente
+                        pelo eventos.js.
+                    -->
+
+                    <div
+                        class="eventos-lista"
+                        id="eventos-anteriores"
+                    ></div>
+
+                </div>
+
 
             </div>
 
-            </section>
+        </section>
 
-            </main>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
 
     <footer id="footer"></footer>
 
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
 
     <script src="../../beckend/js/global.js"></script>
 
     <script src="../../beckend/js/components.js"></script>
 
     <script src="eventos.js"></script>
+
 
 </body>
 

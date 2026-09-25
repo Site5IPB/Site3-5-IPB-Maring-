@@ -1,0 +1,657 @@
+.biblia-container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.biblia-intro {
+    padding: 55px 0 50px;
+    background: var(--cor-fundo);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.biblia-label {
+    margin: 0 0 10px;
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--verde-principal);
+}
+
+.biblia-intro h1 {
+    max-width: 850px;
+    margin: 0 0 14px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    color: var(--cor-texto);
+}
+
+.biblia-texto {
+    max-width: 760px;
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--cor-texto-secundario);
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.biblia-conteudo {
+    padding: 45px 0 60px;
+    background: var(--cor-fundo);
+}
+
+.biblia-voltar {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 35px;
+    color: var(--cor-texto-secundario);
+    font-size: .95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.biblia-voltar:hover {
+    color: var(--verde-principal);
+    transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   TESTAMENTOS
+   ========================================================= */
+
+.biblia-testamento {
+    margin-bottom: 55px;
+}
+
+.biblia-testamento:last-of-type {
+    margin-bottom: 0;
+}
+
+.biblia-testamento-titulo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.biblia-testamento-linha {
+    width: 5px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: var(--verde-principal);
+}
+
+.biblia-testamento-titulo p {
+    margin: 0;
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--cor-texto);
+}
+
+.biblia-testamento-titulo div span {
+    display: block;
+    margin-top: 4px;
+    font-size: .9rem;
+    color: var(--cor-texto-secundario);
+}
+
+
+/* =========================================================
+   LIVROS
+   ========================================================= */
+
+.biblia-livros-grid {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.biblia-livro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 82px;
+    padding: 10px 7px;
+
+    background: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    color: var(--cor-texto);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background-color .2s ease;
+}
+
+.biblia-livro:hover {
+    transform: translateY(-3px);
+    border-color: var(--verde-principal);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    background: var(--verde-suave);
+}
+
+.biblia-livro:focus-visible {
+    outline: 3px solid var(--verde-principal);
+    outline-offset: 2px;
+}
+
+.biblia-livro-abreviacao {
+    margin-bottom: 5px;
+    font-size: .95rem;
+    font-weight: 800;
+    color: var(--verde-principal);
+}
+
+.biblia-livro-nome {
+    font-size: .78rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--cor-texto);
+}
+
+
+/* =========================================================
+   CAPÍTULOS
+   ========================================================= */
+
+.biblia-capitulos-area {
+    margin-top: 50px;
+    padding-top: 45px;
+    border-top: 1px solid var(--cor-borda);
+}
+
+.biblia-capitulos-area[hidden] {
+    display: none;
+}
+
+.biblia-capitulos-cabecalho {
+    margin-bottom: 25px;
+}
+
+.biblia-voltar-livros {
+    display: inline-flex;
+    margin-bottom: 18px;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: var(--cor-texto-secundario);
+
+    font: inherit;
+    font-size: .95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: color .2s ease;
+}
+
+.biblia-voltar-livros:hover {
+    color: var(--verde-principal);
+}
+
+.biblia-capitulos-label {
+    margin: 0 0 5px;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--verde-principal);
+}
+
+.biblia-capitulos-cabecalho h2 {
+    margin: 0 0 5px;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    color: var(--cor-texto);
+}
+
+.biblia-capitulos-cabecalho > p:last-child {
+    margin: 0;
+    color: var(--cor-texto-secundario);
+    font-size: .95rem;
+}
+
+.biblia-capitulos-grid {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.biblia-capitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 58px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.biblia-capitulo:hover {
+    transform: translateY(-2px);
+    border-color: var(--verde-principal);
+    background: var(--verde-suave);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+}
+
+.biblia-capitulo:focus-visible {
+    outline: 3px solid var(--verde-principal);
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   LEITOR
+   ========================================================= */
+
+.biblia-leitor {
+    margin-top: 55px;
+    padding-top: 45px;
+
+    border-top: 1px solid var(--cor-borda);
+}
+
+.biblia-leitor[hidden] {
+    display: none;
+}
+
+.biblia-leitor-cabecalho {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.biblia-voltar-capitulos {
+    display: inline-flex;
+
+    margin-bottom: 22px;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: var(--cor-texto-secundario);
+
+    font: inherit;
+    font-size: .95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: color .2s ease;
+}
+
+.biblia-voltar-capitulos:hover {
+    color: var(--verde-principal);
+}
+
+.biblia-leitor-versao {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 8px 12px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+
+    background: var(--cor-fundo);
+}
+
+.biblia-leitor-versao span {
+    font-size: .78rem;
+    color: var(--cor-texto-secundario);
+}
+
+.biblia-leitor-versao strong {
+    font-size: .85rem;
+    color: var(--verde-principal);
+}
+
+.biblia-leitor-label {
+    margin: 0 0 5px;
+
+    font-size: .8rem;
+    font-weight: 700;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    color: var(--verde-principal);
+}
+
+.biblia-leitor-cabecalho h2 {
+    margin: 0 0 7px;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+
+    color: var(--cor-texto);
+}
+
+#biblia-leitor-subtitulo {
+    margin: 0;
+
+    color: var(--cor-texto-secundario);
+    font-size: .95rem;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.biblia-leitor-status {
+    padding: 25px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+
+    background: var(--cor-fundo);
+
+    color: var(--cor-texto-secundario);
+
+    text-align: center;
+}
+
+.biblia-leitor-status.erro {
+    border-color: #c94b4b;
+    color: #b83232;
+}
+
+
+/* =========================================================
+   TEXTO BÍBLICO
+   ========================================================= */
+
+.biblia-leitor-texto {
+    max-width: 820px;
+    margin: 0 auto;
+
+    color: var(--cor-texto);
+
+    font-size: 1.08rem;
+    line-height: 1.9;
+}
+
+.biblia-versiculo {
+    margin: 0 0 17px;
+}
+
+.biblia-versiculo:last-child {
+    margin-bottom: 0;
+}
+
+.biblia-versiculo-numero {
+    display: inline-block;
+
+    min-width: 28px;
+    margin-right: 7px;
+
+    color: var(--verde-principal);
+
+    font-size: .78rem;
+    font-weight: 800;
+
+    vertical-align: top;
+}
+
+.biblia-versiculo-texto {
+    color: var(--cor-texto);
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO DO CAPÍTULO
+   ========================================================= */
+
+.biblia-leitor-navegacao {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    max-width: 820px;
+
+    margin: 40px auto 0;
+    padding-top: 25px;
+
+    border-top: 1px solid var(--cor-borda);
+}
+
+.biblia-navegacao-botao {
+    padding: 11px 16px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    font: inherit;
+    font-size: .9rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        border-color .2s ease,
+        background-color .2s ease,
+        color .2s ease;
+}
+
+.biblia-navegacao-botao:hover:not(:disabled) {
+    border-color: var(--verde-principal);
+    background: var(--verde-suave);
+}
+
+.biblia-navegacao-botao:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-theme="dark"] .biblia-livro:hover,
+[data-theme="dark"] .biblia-capitulo:hover,
+[data-theme="dark"] .biblia-navegacao-botao:hover:not(:disabled) {
+    background: var(--verde-escuro);
+}
+
+[data-theme="dark"] .biblia-livro:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+}
+
+[data-theme="dark"] .biblia-capitulo:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .25);
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .biblia-livros-grid,
+    .biblia-capitulos-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .biblia-livros-grid,
+    .biblia-capitulos-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .biblia-container {
+        width: min(100% - 32px, 1180px);
+    }
+
+    .biblia-intro {
+        padding: 35px 0 40px;
+    }
+
+    .biblia-label {
+        margin-bottom: 8px;
+    }
+
+    .biblia-intro h1 {
+        margin-bottom: 12px;
+    }
+
+    .biblia-texto {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .biblia-conteudo {
+        padding: 35px 0 45px;
+    }
+
+    .biblia-voltar {
+        margin-bottom: 28px;
+    }
+
+    .biblia-testamento {
+        margin-bottom: 40px;
+    }
+
+    .biblia-testamento-titulo {
+        margin-bottom: 18px;
+    }
+
+    .biblia-testamento-titulo p {
+        font-size: 1.3rem;
+    }
+
+    .biblia-testamento-linha {
+        height: 42px;
+    }
+
+    .biblia-livros-grid,
+    .biblia-capitulos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .biblia-livro {
+        min-height: 76px;
+    }
+
+    .biblia-capitulo {
+        min-height: 54px;
+    }
+
+    .biblia-capitulos-area {
+        margin-top: 35px;
+        padding-top: 35px;
+    }
+
+    /* Leitor */
+
+    .biblia-leitor {
+        margin-top: 35px;
+        padding-top: 35px;
+    }
+
+    .biblia-leitor-cabecalho {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+    }
+
+    .biblia-leitor-versao {
+        position: static;
+
+        width: fit-content;
+        margin-bottom: 20px;
+    }
+
+    .biblia-leitor-texto {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .biblia-versiculo {
+        margin-bottom: 15px;
+    }
+
+    .biblia-leitor-navegacao {
+        flex-direction: column;
+    }
+
+    .biblia-navegacao-botao {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .biblia-voltar,
+    .biblia-livro,
+    .biblia-capitulo,
+    .biblia-voltar-livros,
+    .biblia-voltar-capitulos,
+    .biblia-navegacao-botao {
+        transition: none;
+    }
+
+}

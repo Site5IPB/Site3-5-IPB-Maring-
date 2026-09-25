@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Bíblia — 5ª Igreja Presbiteriana de Maringá"
+    >
+
+    <title>Bíblia — SIPB Maringá</title>
+
+    <link
+        rel="icon"
+        type="image/x-icon"
+        href="../../../asssets/logo/ipb.ico"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../../beckend/css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../../beckend/css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="biblia.css"
+    >
+</head>
+
+<body data-root="../../../">
+
+    <header id="header"></header>
+
+    <main>
+
+        <!-- INTRODUÇÃO -->
+        <section class="biblia-intro">
+
+            <div class="biblia-container">
+
+                <p class="biblia-label">
+                    Bíblia
+                </p>
+
+                <h1>
+                    Leia a Palavra de Deus
+                </h1>
+
+                <p class="biblia-texto">
+                    Escolha um livro da Bíblia para começar sua leitura.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTEÚDO -->
+        <section class="biblia-conteudo">
+
+            <div class="biblia-container">
+
+                <a
+                    href="../estudos.html"
+                    class="biblia-voltar"
+                >
+                    ← Voltar para Estudos
+                </a>
+
+
+                <!-- ANTIGO TESTAMENTO -->
+                <section class="biblia-testamento">
+
+                    <div class="biblia-testamento-titulo">
+
+                        <span class="biblia-testamento-linha"></span>
+
+                        <div>
+
+                            <p>
+                                Antigo Testamento
+                            </p>
+
+                            <span>
+                                39 livros
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="biblia-livros-grid"
+                        id="biblia-antigo-testamento"
+                    ></div>
+
+                </section>
+
+
+                <!-- NOVO TESTAMENTO -->
+                <section class="biblia-testamento">
+
+                    <div class="biblia-testamento-titulo">
+
+                        <span class="biblia-testamento-linha"></span>
+
+                        <div>
+
+                            <p>
+                                Novo Testamento
+                            </p>
+
+                            <span>
+                                27 livros
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="biblia-livros-grid"
+                        id="biblia-novo-testamento"
+                    ></div>
+
+                </section>
+
+
+                <!-- CAPÍTULOS -->
+                <section
+                    class="biblia-capitulos-area"
+                    id="biblia-capitulos-area"
+                    hidden
+                >
+
+                    <div class="biblia-capitulos-cabecalho">
+
+                        <button
+                            type="button"
+                            class="biblia-voltar-livros"
+                            id="biblia-voltar-livros"
+                        >
+                            ← Voltar para livros
+                        </button>
+
+                        <p class="biblia-capitulos-label">
+                            Livro selecionado
+                        </p>
+
+                        <h2 id="biblia-livro-titulo"></h2>
+
+                        <p id="biblia-livro-informacao"></p>
+
+                    </div>
+
+                    <div
+                        class="biblia-capitulos-grid"
+                        id="biblia-capitulos-grid"
+                    ></div>
+
+                </section>
+
+
+                <!-- LEITOR -->
+                <section
+                    class="biblia-leitor"
+                    id="biblia-leitor"
+                    hidden
+                >
+
+                    <div class="biblia-leitor-cabecalho">
+
+                        <button
+                            type="button"
+                            class="biblia-voltar-capitulos"
+                            id="biblia-voltar-capitulos"
+                        >
+                            ← Voltar para capítulos
+                        </button>
+
+                        <div class="biblia-leitor-versao">
+
+                            <span>
+                                Versão
+                            </span>
+
+                            <strong id="biblia-versao-nome">
+                                Almeida
+                            </strong>
+
+                        </div>
+
+                        <p class="biblia-leitor-label">
+                            Leitura
+                        </p>
+
+                        <h2 id="biblia-leitor-titulo">
+                            João 3
+                        </h2>
+
+                        <p id="biblia-leitor-subtitulo">
+                            Carregando capítulo...
+                        </p>
+
+                    </div>
+
+
+                    <!-- MENSAGEM DE CARREGAMENTO -->
+                    <div
+                        class="biblia-leitor-status"
+                        id="biblia-leitor-status"
+                    >
+                        Carregando capítulo...
+                    </div>
+
+
+                    <!-- TEXTO -->
+                    <article
+                        class="biblia-leitor-texto"
+                        id="biblia-leitor-texto"
+                    ></article>
+
+
+                    <!-- NAVEGAÇÃO -->
+                    <div
+                        class="biblia-leitor-navegacao"
+                        id="biblia-leitor-navegacao"
+                        hidden
+                    >
+
+                        <button
+                            type="button"
+                            id="biblia-capitulo-anterior"
+                            class="biblia-navegacao-botao"
+                        >
+                            ← Capítulo anterior
+                        </button>
+
+                        <button
+                            type="button"
+                            id="biblia-capitulo-proximo"
+                            class="biblia-navegacao-botao"
+                        >
+                            Próximo capítulo →
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer id="footer"></footer>
+
+
+    <script src="../../../beckend/js/global.js"></script>
+
+    <script src="../../../beckend/js/components.js"></script>
+
+    <script src="biblia.js"></script>
+
+</body>
+
+</html>
+

@@ -532,9 +532,8 @@
 
 
 .eventos-carrossel-proximo {
-
-    right: -20px;
-
+    right: -8px;
+    left: auto;
 }
 
 
@@ -661,9 +660,8 @@
     }
 
     .eventos-carrossel-proximo {
-
-        right: -15px;
-
+        right: -20px;
+        left: auto;
     }
 
 }
@@ -700,7 +698,7 @@
     .eventos-carrossel-proximo {
 
         right: -10px;
-
+        left:auto;
     }
 
 }
@@ -799,9 +797,8 @@
     }
 
     .eventos-carrossel-proximo {
-
         right: -8px;
-
+        left: auto;
     }
 
     .eventos-anteriores {
